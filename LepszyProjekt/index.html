@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STAR WARS</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gantari:wght@100&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Nawigacja -->
+    <nav class="navbar">
+      <h1 class="logo">GALAKTYKA</h1>
+      <ul class="nav-links">
+        <li class="active"><a href="#">Start</a></li>
+        <li><a href="#">Galeria</a></li>
+        <li><a href="#">Odkrywaj</a></li>
+        <li><a href="#">O nas</a></li>
+        <li class="ctn"><a href="#">Kontakt</a></li>
+      </ul>
+      <img src="./img/menu-btn.png" alt="Hamburger" class="menu-btn" />
+    </nav>
+
+    <header>
+      <div class="header-content">
+        <h2>Wejdź w świat Star Wars</h2>
+        <div class="line"></div>
+        <h1>Poczuj to</h1>
+        <a href="#" class="ctn">Zobacz więcej</a>
+      </div>
+    </header>
+    <!-- Wydarzenia -->
+    <section class="events">
+      <div class="title">
+        <h1>Nadchodzące wydarzenia</h1>
+        <div class="line"></div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="./img/img1.jpg" alt="Statki w kosmosie" class="imgg" />
+          <h4>Podróże</h4>
+          <p>
+            Już niedługo wybierz się wraz z impreium na Gwiazdę Śmierci i
+            zwiedzaj potęgę ciemnej strony mocy!
+          </p>
+          <a href="#" class="ctn">Więcej!</a>
+        </div>
+        <div class="col">
+          <img src="./img/img2.jpg" alt=" bitwa statków" class="imgg" />
+          <h4>Wrażenia</h4>
+          <p>
+            Za pomocą okularów VR przenieś się z nami w świat walki! Wciel się w
+            rolę pilota i niszcz pomioty Rebelii!
+          </p>
+          <a href="#" class="ctn">Więcej!</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="explore">
+      <div class="explore-content">
+        <h1>ODKRYJ TEN ŚWIAT</h1>
+        <div class="line"></div>
+        <p>
+          Przeleć się wraz z Hanem Solo Sokołem Milenium i zdaj relacje na
+          insta!
+        </p>
+        <a href="#" class="ctn">Więcej!</a>
+      </div>
+    </section>
+
+    <section class="tours">
+      <div class="row">
+        <div class="col content-col">
+          <h1>NADCHODZĄCE WYPRAWY</h1>
+          <div class="line"></div>
+          <p>
+            Wybierz swojego Sith-a i wraz z nim podróżuj w świecie Star Wars.
+            Obok najpotężniejsi mistrzowie! Dobrze się zastanów komu powierzysz
+            swój rozwój mocy!
+          </p>
+          <a href="#" class="ctn">Więcej!</a>
+        </div>
+        <div class="col image-col">
+          <div class="image-gallery">
+            <img src="./img/img3.jpg" alt="" />
+            <img src="./img/img4.jpg" alt="" />
+            <img src="./img/img5.jpg" alt="" />
+            <img src="./img/img6.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <p>ZNAJDZIESZ NAS NA NASZYCH SOCIAL MEDIACH</p>
+      <a class="social-icon" href="https://twitter.com/" target="_blank">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a>
+      <a class="social-icon" href="https://www.facebook.com/" target="_blank">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+      <a class="social-icon" href="https://www.youtube.com/" target="_blank">
+        <ion-icon name="logo-youtube"></ion-icon>
+      </a>
+      <a class="social-icon" href="https://www.instagram.com/" target="_blank"
+        ><ion-icon name="logo-instagram"></ion-icon
+      ></a>
+
+      <p>
+        <small>&copy; Copyright 2022 Bartosz Szydłowski</small>
+      </p>
+    </section>
+
+    <script>
+      const menuBtn = document.querySelector(".menu-btn");
+      const navlinks = document.querySelector(".nav-links");
+
+      menuBtn.addEventListener("click", () => {
+        navlinks.classList.toggle("mobile-menu");
+      });
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+      //przycisk
+      var mybutton = document.getElementById("myBtn");
+
+      // Kiedy zjade na dół o 20px pojawia się przycisk
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // Kiedy nacisne tylko przycisk scroluje mnie do góry
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>
